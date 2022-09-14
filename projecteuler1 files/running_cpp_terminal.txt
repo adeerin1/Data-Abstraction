@@ -1,0 +1,3 @@
+g++ -std=c++11 projecteuler1.cpp -o projecteuler1 
+./projecteuler1 
+
