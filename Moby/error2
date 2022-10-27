@@ -1,0 +1,7 @@
+/tmp/cc6tYhs6.o: In function `main':
+moby.cpp:(.text+0x1b): undefined reference to `std::cout'
+moby.cpp:(.text+0x20): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+/tmp/cc6tYhs6.o: In function `__static_initialization_and_destruction_0(int, int)':
+moby.cpp:(.text+0x54): undefined reference to `std::ios_base::Init::Init()'
+moby.cpp:(.text+0x63): undefined reference to `std::ios_base::Init::~Init()'
+collect2: error: ld returned 1 exit status
