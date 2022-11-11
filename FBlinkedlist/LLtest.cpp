@@ -45,9 +45,9 @@ void copysegment(){
         std::cout << "Size error\n";
     }
     std::cout << "copy constructor for BCD\n";
-    FileLinkedList<char> al2(++al.begin(),----al.end(),"al2_test.bin");
+    FileLinkedList<char> al2(++al.begin(),--al.end(),"al2_test.bin");
     al2.print();
-    if (al.size() != 3)
+    if (al2.size() != 3)
     {
         std::cout << "Size error\n";
     }
@@ -148,10 +148,10 @@ void erase() {
 void runtests()
 {
     std::cout << "Running tests:\n";
-    // constructorpushandpop();
-    //indexandbothsets();
-    //insert();
-    //erase();
+    constructorpushandpop();
+    indexandbothsets();
+    insert();
+    erase();
     copysegment();
 };
 

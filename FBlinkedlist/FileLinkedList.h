@@ -104,7 +104,7 @@ public:
 		std::fseek(fl, 0, SEEK_END);
 		if (std::ftell(fl) > 0)
 		{ // file has content
-			std::cout << "File has content\n";
+			//std::cout << "File has content\n";
 			int free;
 			ff.clear();
 			std::fseek(fl, 0, SEEK_SET);
@@ -114,7 +114,7 @@ public:
 		}
 		else
 		{
-			std::cout << "empty file\n";
+			//std::cout << "empty file\n";
 			ct = 0;
 			// std::fwrite(&ct,sizeof(int),1,fl);
 			ff.clear();
@@ -168,7 +168,12 @@ public:
 	template <typename I> // The type I will be an iterator.
 	FileLinkedList(I begin, I end, const std::string &fname)
 	{
-		//maybe copy default constuctor style?
+		fl = std::fopen(fname.c_str(), "w+b");
+		clear();
+		for (auto itr = begin; itr != end; ++itr) {
+			push_back(*itr);
+			//std::cout << "Pushing back: " << *itr << std::endl;
+		}
 	}
 
 	// iterator instantiation
